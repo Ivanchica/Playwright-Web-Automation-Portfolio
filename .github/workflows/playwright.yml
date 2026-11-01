@@ -18,6 +18,11 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
+      # Injected secrets as environment variables
+      env:
+        SAUCEDEMO_USERNAME: ${{ secrets.SAUCEDEMO_USERNAME }}
+        SAUCEDEMO_PASSWORD_HAPPY_PATH: ${{ secrets.SAUCEDEMO_PASSWORD_HAPPY_PATH }}
+        SAUCEDEMO_PASSWORD_SAD_PATH: ${{ secrets.SAUCEDEMO_PASSWORD_SAD_PATH }}
       run: npx playwright test
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
