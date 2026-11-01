@@ -6,9 +6,9 @@ test('User can successfully log in and view dashboard', async ({ page }) => {
   
   // 2. Fill credentials using safe environment variables
   await page.locator('[data-test="username"]').click();
-  await page.locator('[data-test="username"]').fill(process.env.TEST_USER_NAME!);
+  await page.locator('[data-test="username"]').fill(process.env.SAUCEDEMO_USER_NAME!);
   await page.locator('[data-test="password"]').click();
-  await page.locator('[data-test="password"]').fill(process.env.TEST_USER_PASSWORD_HAPPY_PATH!);
+  await page.locator('[data-test="password"]').fill(process.env.SAUCEDEMO_USER_PASSWORD_HAPPY_PATH!);
 
   // 3. Click Login
   await page.locator('[data-test="login-button"]').click();
