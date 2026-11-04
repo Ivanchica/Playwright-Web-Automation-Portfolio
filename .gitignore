@@ -9,6 +9,7 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+/playwright/.auth/
 
 # Playwright Saved Authentication State (Cookies & Sessions)
 /playwright/.auth/
